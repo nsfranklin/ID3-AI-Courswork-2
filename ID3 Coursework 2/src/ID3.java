@@ -107,12 +107,37 @@ class ID3 {
 		String[][] dataSansHeader = removeHeader(trainingData);
 		double totalEntropy = calcTotalEntropy(trainingData);
 		double[] branchEntropy = calcBranchEntropy(trainingData);
-		
+
+		branchifyData(trainingData, i);
 
 	} // train()
 
 	public double[] calcBranchEntropy(String[][] trainingData){
+		int numberOfAttributes = trainingData.length - 1;
+		double[] results = new double[numberOfAttributes];
+		for(int i = 0 ; i < numberOfAttributes ; i++){
+			results[i] = calcAttributeEntropy(trainingData, i);
+		}
+		return results;
+	}
 
+	public double calcAttributeEntropy(String[][] data, int i){
+
+	}
+
+	public <E> E[][] branchifyData(E[][] data, E targetAttribute){
+		int count =
+		E[][] result = (E[][])new Object[][data[0].length-1];
+		for(int i = 0 ; i < data.length ; i++){
+			if(containsAttribute(data[i])) {
+				for () {
+
+				}
+			}
+		}
+
+
+		return result;
 	}
 
 	public double calcTotalEntropy(String[][] data){
@@ -128,8 +153,8 @@ class ID3 {
 		}
 		return result;
 	}
-	public String[][] removeHeader(String[][] trainingData){
-		String[][] temp = new String[trainingData.length-1][trainingData[0].length];
+	public <E> E[][] removeHeader(E[][] trainingData){
+		E[][] temp = (E[][])new Object[trainingData.length-1][trainingData[0].length];
 		for(int i = 1; i < trainingData.length ; i++){
 			for(int j = 0 ; j < trainingData[0].length ; j++){
 				temp[i-1][j] = trainingData[i][j];
