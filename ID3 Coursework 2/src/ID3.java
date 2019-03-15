@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 class ID3 {
@@ -92,25 +93,66 @@ class ID3 {
 	/** Execute the decision tree on the given examples in testData, and print
 	 *  the resulting class names, one to a line, for each example in testData.
 	 **/
+
 	public void classify(String[][] testData) {
 		if (decisionTree == null)
 			error("Please run training phase before classification");
-
 
 
 	} // classify()
 
 	public void train(String[][] trainingData) {
 		indexStrings(trainingData);
-		temp = new TreeNode();
-		while(){
 
-		}
+		String[][] dataSansHeader = removeHeader(trainingData);
+		double totalEntropy = calcTotalEntropy(trainingData);
+		double[] branchEntropy = calcBranchEntropy(trainingData);
+		
 
 	} // train()
 
-	public v
+	public double[] calcBranchEntropy(String[][] trainingData){
 
+	}
+
+	public double calcTotalEntropy(String[][] data){
+		double result = 0;
+		CountingList<String> countingList = new CountingList<>();
+		int numberOfColumns = data[0].length;
+		for(int i = 0 ; i < data.length ; i++){
+			countingList.add(data[i][numberOfColumns-1]);
+		}
+		for(int j = 0 ; j < countingList.length ; j++ ){
+			result = result + calcEntropyWithAdjustment(countingList.get(j),countingList.total());
+			System.out.println(result);
+		}
+		return result;
+	}
+	public String[][] removeHeader(String[][] trainingData){
+		String[][] temp = new String[trainingData.length-1][trainingData[0].length];
+		for(int i = 1; i < trainingData.length ; i++){
+			for(int j = 0 ; j < trainingData[0].length ; j++){
+				temp[i-1][j] = trainingData[i][j];
+			}
+		}
+		return temp;
+	}
+	public <E> double calcEntropyOfCountingList(CountingList<E> list){
+		double result = -1;
+		for(int i = 0 ; i < list.length ; i++){
+
+
+		}
+
+		return result;
+	}
+	public double calcEntropyWithAdjustment(int count, int total){
+		if(count > total){
+			System.out.println("Count larger than total. What are you doing mug.");
+		}
+		double x = (double)count/(double)total;
+		return xlogx(x)*-1;
+	}
 
 	/** Given a 2-dimensional array containing the training data, numbers each
 	 *  unique value that each attribute has, and stores these Strings in
@@ -189,3 +231,51 @@ class ID3 {
 	} // main()
 
 } // class ID3
+
+class CountingList<E>{
+
+	ArrayList<E> listOfContent;
+	ArrayList<Integer> countOfContent;
+	public int length;
+
+	CountingList(){
+		listOfContent = new ArrayList<E>();
+		countOfContent = new ArrayList<Integer>();
+		length = 0;
+	}
+
+	public void add(E ob){
+		int indexInContent;
+		if(listOfContent.contains(ob)){
+			indexInContent = listOfContent.indexOf(ob);
+			countOfContent.set(indexInContent, countOfContent.get(indexInContent) + 1);
+		}else{
+			listOfContent.add(ob);
+			countOfContent.add(1);
+			this.length++;
+		}
+	}
+
+	public void remove(){}
+
+	public int getByOb(E ob){
+		int indexInContent = listOfContent.indexOf(ob);
+		if(indexInContent > 0){
+			return countOfContent.get(indexInContent);
+		}
+		return indexInContent;
+	}
+
+	public int get(int i){
+		return countOfContent.get(i);
+	}
+
+	public int total() {
+		int total = 0;
+		for (int i = 0 ; i < length ; i++) {
+			total = total + countOfContent.get(i);
+		}
+		return total;
+	}
+
+}
