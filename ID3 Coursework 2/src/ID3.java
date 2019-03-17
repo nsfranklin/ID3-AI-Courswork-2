@@ -125,11 +125,12 @@ class ID3 {
 
 	}
 
-	public <E> E[][] branchifyData(E[][] data, E targetAttribute){
+	public <E> E[][][] branchifyData(E[][] data, int column){
 		int count =
 		E[][] result = (E[][])new Object[][data[0].length-1];
-		for(int i = 0 ; i < data.length ; i++){
-			if(containsAttribute(data[i])) {
+
+		for (int i = 0; i < data.length; i++) {
+			if (containsAttribute(data[i])) {
 				for () {
 
 				}
@@ -259,8 +260,8 @@ class ID3 {
 
 class CountingList<E>{
 
-	ArrayList<E> listOfContent;
-	ArrayList<Integer> countOfContent;
+	private ArrayList<E> listOfContent;
+	private ArrayList<Integer> countOfContent;
 	public int length;
 
 	CountingList(){
