@@ -121,8 +121,16 @@ class ID3 {
 		return results;
 	}
 
-	public double calcAttributeEntropy(String[][] data, int i){
-
+	public double calcAttributeEntropy(String[][] data, int parameterColumn){ //
+		double result = 0;
+		ClassIncludingCountingListing<String> classIncCountList = new ClassIncludingCountingListing<>();
+		int numberOfColumns = data[0].length;
+		for(int i = 0; i < data.length ; i++){
+			classIncCountList.add(data[i][parameterColumn], data[i][numberOfColumns-1]);
+		}
+		for(int j = 0 ; j < classIncCountList.length ; j++){
+			result = result + calcEntropyWithAdjustment(classIncCountList.getClassCount(),classIncCountList.getClassTotal());
+		}
 	}
 
 	public <E> E[][][] branchifyData(E[][] data, int column){
@@ -260,8 +268,8 @@ class ID3 {
 
 class CountingList<E>{
 
-	private ArrayList<E> listOfContent;
-	private ArrayList<Integer> countOfContent;
+	protected ArrayList<E> listOfContent;
+	protected ArrayList<Integer> countOfContent;
 	public int length;
 
 	CountingList(){
@@ -305,3 +313,82 @@ class CountingList<E>{
 	}
 
 }
+class ClassIncludingCountingListing<E> extends CountingList{
+
+	private ArrayList<CountingList> classOfCounts;
+
+	ClassIncludingCountingListing(){
+		super();
+		classOfCounts = new ArrayList<>();
+	}
+
+	public void add(E ob, E classFound){
+		int indexInContent;
+		int tempsize;
+		if(listOfContent.contains(ob)){
+			indexInContent = listOfContent.indexOf(ob);
+			countOfContent.set(indexInContent, (Integer)countOfContent.get(indexInContent) + 1);
+			classOfCounts.get(indexInContent).add(classFound);
+
+		}else{
+			listOfContent.add(ob);
+			countOfContent.add(1);
+			classOfCounts.add(new CountingList());
+			tempsize = classOfCounts.size();
+			classOfCounts.get(tempsize-1).add(classFound);
+			this.length++;
+		}
+	}
+
+	public int getClassTotal(E ob){
+		int indexInContent = listOfContent.indexOf(ob);
+		if(indexInContent == -1){
+			return -1;
+		}else{
+			return classOfCounts.get(indexInContent).total();
+		}
+	}
+
+	public int getClassCount(E ob, int i){
+		int indexInContent = listOfContent.indexOf(ob);
+		if(indexInContent == -1){
+			return -1;
+		}else{
+			return classOfCounts.get(indexInContent).get(i);
+		}
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
