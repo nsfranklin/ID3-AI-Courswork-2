@@ -106,14 +106,14 @@ class ID3 {
 		indexStrings(trainingData);
 		int activeColumn = 0;
 		String[][] dataSansHeader = removeHeader(trainingData);
-		double totalEntropy = calcTotalEntropy(trainingData);
-		double[] branchEntropy = calcBranchEntropy(trainingData);
+		double totalEntropy = calcTotalEntropy(dataSansHeader);
+		double[] branchEntropy = calcBranchEntropy(dataSansHeader);
 
 		branchifyData(trainingData, activeColumn);
 
 	}
 
-	public <E> double[] calcBranchEntropy(E[][] trainingData){
+	public  double[] calcBranchEntropy(String[][] trainingData){
 		int numberOfAttributes = trainingData.length - 1;
 		double[] results = new double[numberOfAttributes];
 		for(int i = 0 ; i < numberOfAttributes ; i++){
@@ -122,27 +122,29 @@ class ID3 {
 		return results;
 	}
 
-	public <E> double calcAttributeEntropy(E[][] data, int parameterColumn){ //
+	public  double calcAttributeEntropy(String[][] data, int parameterColumn){ //
 		double result = 0;
-		ClassIncludingCountingListing<E> classIncCountList = new ClassIncludingCountingListing<>();
+		ClassIncludingCountingListing classIncCountList = new ClassIncludingCountingListing<>();
 		int numberOfColumns = data[0].length;
 		for(int i = 0; i < data.length ; i++){
 			classIncCountList.add(data[i][parameterColumn], data[i][numberOfColumns-1]);
+			//System.out.println(data[i][parameterColumn]);
 		}
-		for(int j = 0 ; j < classIncCountList.length ; j++){
-			result = result + calcEntropyWithAdjustment(classIncCountList.getClassCount((E)classIncCountList.getObj(parameterColumn), j) , classIncCountList.getClassTotal((E)classIncCountList.getObj(parameterColumn)));
-			System.out.println(result + " j");
+		for(int j = 0 ; j < 3 ; j++){
+			System.out.println(classIncCountList.getClassLength(classIncCountList.getObj(parameterColumn)));
+			result = result + calcEntropyWithAdjustment(classIncCountList.getClassCount(classIncCountList.getObj(parameterColumn), j) , classIncCountList.getClassTotal(classIncCountList.getObj(parameterColumn)));
+			System.out.println(result + " " + j);
 		}
 		return result;
 	}
 
-	public <E> ArrayList<E[][]> branchifyData(E[][] data, int column){
+	public  ArrayList<String[][]> branchifyData(String[][] data, int column){
 		int count = 0;
 
 
 
 
-		E[][] result = (E[][])new Object[count][data[0].length-1];
+		String[][] result = (String[][])new Object[count][data[0].length-1];
 
 		for (int i = 0; i < data.length; i++) {
 			//if (containsAttribute(data[i])) {
@@ -150,10 +152,10 @@ class ID3 {
 			//	}
 			//}
 		}
-		return new ArrayList<E[][]>();
+		return new ArrayList<String[][]>();
 	}
 
-	public <E> boolean containsAttribute(E[][] data){
+	public  boolean containsAttribute(String[][] data){
 		return true;
 	}
 
@@ -170,8 +172,8 @@ class ID3 {
 		}
 		return result;
 	}
-	public <E> E[][] removeHeader(E[][] trainingData){
-		E[][] temp = (E[][])new Object[trainingData.length-1][trainingData[0].length];
+	public  String[][] removeHeader(String[][] trainingData){
+		String[][] temp = new String[trainingData.length-1][trainingData[0].length];
 		for(int i = 1; i < trainingData.length ; i++){
 			for(int j = 0 ; j < trainingData[0].length ; j++){
 				temp[i-1][j] = trainingData[i][j];
@@ -179,7 +181,7 @@ class ID3 {
 		}
 		return temp;
 	}
-	public <E> double calcEntropyOfCountingList(CountingList<E> list){
+	public  double calcEntropyOfCountingList(CountingList list){
 		double result = -1;
 		for(int i = 0 ; i < list.length ; i++){
 
@@ -281,7 +283,7 @@ class CountingList<E>{
 	public int length;
 
 	CountingList(){
-		listOfContent = new ArrayList<E>();
+		listOfContent = new ArrayList();
 		countOfContent = new ArrayList<Integer>();
 		length = 0;
 	}
@@ -369,8 +371,14 @@ class ClassIncludingCountingListing<E> extends CountingList{
 			return classOfCounts.get(indexInContent).get(i);
 		}
 	}
-
-
+	public int getClassLength(E ob){
+		int indexInContent = listOfContent.indexOf(ob);
+		if(indexInContent == -1){
+			return -1;
+		}else {
+			return classOfCounts.get(indexInContent).length;
+		}
+	}
 }
 
 
