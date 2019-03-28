@@ -104,21 +104,24 @@ class ID3 {
 
 	public void train(String[][] trainingData) {
 		indexStrings(trainingData);
-		//String[][] alteredData = classNumberfier();
 		String[][] dataSansHeader = removeHeader(trainingData);
+		String[][] alteredData = classNumberfier(dataSansHeader);
 		Integer[] columnsRemoved = new Integer[trainingData[0].length];
 		for(int i = 0 ; i < trainingData[0].length ; i++){
 			columnsRemoved[i] = -1;
 		}
-		decisionTree = recursiveTrainingmethod(dataSansHeader, columnsRemoved);
+		decisionTree = recursiveTrainingmethod(alteredData, columnsRemoved);
 	}
 
 	public String[][] classNumberfier(String[][] data){
 		String[][] results = new String[data.length][data[0].length];
+		CountingList<String> classes = new CountingList<>();
 		for(int i = 0 ; i < data.length ; i++){
-			for(int j = 0 ; j < data[0].length ; j++){
-				if(j == data[0].length -1){
-
+			for(int j = 0 ; j < data[i].length ; j++){
+				if(j == data[i].length -1){
+					classes.add(data[i][j]);
+					results[i][j] = Integer.toString(classes.find(data[i][j]));
+					//System.out.print(Integer.toString(classes.find(data[i][j])) + " | ");
 				}else{
 					results[i][j] = data[i][j];
 				}
@@ -130,21 +133,25 @@ class ID3 {
 	public TreeNode recursiveTrainingmethod(String[][] data, Integer[] columnsRemoved){
 		int activeColumn = 0;
 		double totalEntropy = calcTotalEntropy(data);
-		System.out.println("Total Level Entropy: " + totalEntropy + " | Total Values " + data.length);
+		//System.out.println("Total Level Entropy: " + totalEntropy + " | Total Values " + data.length);
 		ArrayList<TreeNode> returnedTreeNode = new ArrayList<>();
 		double[] branchEntropy = calcBranchEntropy(data);
 		activeColumn = biggestGain(branchEntropy, totalEntropy);
 		if(totalEntropy == 0){
-			return new TreeNode(null, 0 );
+			return new TreeNode(null, Integer.parseInt(data[0][data[0].length-1]));
 		}
 		//System.out.println("Active Column: " + activeColumn);
 		ArrayList<String[][]> branchifiedData = new ArrayList<>();
 		branchifiedData = branchifyData(data, activeColumn);
 		//System.out.println(data[0].length + " " + branchifiedData.size());
 		Integer[] columnsRemoveNow = calcRemoved(columnsRemoved, activeColumn);
-		if(data[0].length > 2) {
+		for(int k = 0 ; k < columnsRemoveNow.length ; k++){
+			//System.out.print(columnsRemoveNow[k] + " ");
+		}
+		//System.out.println();
+		if(data[0].length > 1) {
 			for (int i = 0; i < branchifiedData.size(); i++) {
-				returnedTreeNode.add(recursiveTrainingmethod(branchifiedData.get(i), columnsRemoved));
+				returnedTreeNode.add(recursiveTrainingmethod(branchifiedData.get(i), columnsRemoveNow));
 			}
 		}
 		TreeNode[] childAtLevel = new TreeNode[returnedTreeNode.size()];
@@ -156,11 +163,12 @@ class ID3 {
 
 	public int compareIntArrays(Integer[] oldColumn, Integer[] newColumn){
 		for(int i = 0 ; i < oldColumn.length ; i++){
+			//System.out.println(oldColumn[i] + " " + newColumn[i]);
 			if(oldColumn[i] != newColumn[i]){
 				return i;
 			}
 		}
-		return -1;
+		return -100;
 	}
 
 	public Integer[] calcRemoved(Integer[] data, int newInt){
@@ -168,6 +176,7 @@ class ID3 {
 		Integer[] results = new Integer[data.length];
 		for(int j = 0 ; j < data.length ; j++){
 			results[j] = data[j];
+			//System.out.println(results[j]);
 		}
 		for(int i = 0 ; i < data.length ; i++){
 			if(results[i] == -1){
@@ -200,7 +209,7 @@ class ID3 {
 			results[i] = calcAttributeEntropy(trainingData, i);
 		}
 		for(int j = 0 ; j < results.length ; j++){
-			System.out.println("Attribute " + j + ": " + results[j]);
+			//System.out.println("Attribute " + j + ": " + results[j]);
 		}
 		return results;
 	}
@@ -248,7 +257,6 @@ class ID3 {
 				results.get(positionOfElements.indexOf(data[i][column])).add(removeColumn(data[i], column));
 			}
 		}
-
 		return results;
 	}
 
