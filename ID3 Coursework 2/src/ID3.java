@@ -104,11 +104,30 @@ class ID3 {
 
 	public void train(String[][] trainingData) {
 		indexStrings(trainingData);
+		//String[][] alteredData = classNumberfier();
 		String[][] dataSansHeader = removeHeader(trainingData);
-		decisionTree = recursiveTrainingmethod(dataSansHeader);
+		Integer[] columnsRemoved = new Integer[trainingData[0].length];
+		for(int i = 0 ; i < trainingData[0].length ; i++){
+			columnsRemoved[i] = -1;
+		}
+		decisionTree = recursiveTrainingmethod(dataSansHeader, columnsRemoved);
 	}
 
-	public TreeNode recursiveTrainingmethod(String[][] data){
+	public String[][] classNumberfier(String[][] data){
+		String[][] results = new String[data.length][data[0].length];
+		for(int i = 0 ; i < data.length ; i++){
+			for(int j = 0 ; j < data[0].length ; j++){
+				if(j == data[0].length -1){
+
+				}else{
+					results[i][j] = data[i][j];
+				}
+			}
+		}
+		return results;
+	}
+
+	public TreeNode recursiveTrainingmethod(String[][] data, Integer[] columnsRemoved){
 		int activeColumn = 0;
 		double totalEntropy = calcTotalEntropy(data);
 		System.out.println("Total Level Entropy: " + totalEntropy + " | Total Values " + data.length);
@@ -122,17 +141,44 @@ class ID3 {
 		ArrayList<String[][]> branchifiedData = new ArrayList<>();
 		branchifiedData = branchifyData(data, activeColumn);
 		//System.out.println(data[0].length + " " + branchifiedData.size());
+		Integer[] columnsRemoveNow = calcRemoved(columnsRemoved, activeColumn);
 		if(data[0].length > 2) {
 			for (int i = 0; i < branchifiedData.size(); i++) {
-				returnedTreeNode.add(recursiveTrainingmethod(branchifiedData.get(i)));
+				returnedTreeNode.add(recursiveTrainingmethod(branchifiedData.get(i), columnsRemoved));
 			}
 		}
 		TreeNode[] childAtLevel = new TreeNode[returnedTreeNode.size()];
 		for(int i = 0 ; i < returnedTreeNode.size() ; i++){
 			childAtLevel[i] = returnedTreeNode.get(i);
 		}
-		return new TreeNode(childAtLevel, activeColumn);
+		return new TreeNode(childAtLevel, compareIntArrays(columnsRemoved, columnsRemoveNow));
+	}
 
+	public int compareIntArrays(Integer[] oldColumn, Integer[] newColumn){
+		for(int i = 0 ; i < oldColumn.length ; i++){
+			if(oldColumn[i] != newColumn[i]){
+				return i;
+			}
+		}
+		return -1;
+	}
+
+	public Integer[] calcRemoved(Integer[] data, int newInt){
+		int count = 0;
+		Integer[] results = new Integer[data.length];
+		for(int j = 0 ; j < data.length ; j++){
+			results[j] = data[j];
+		}
+		for(int i = 0 ; i < data.length ; i++){
+			if(results[i] == -1){
+				if(count == newInt){
+					results[i] = newInt;
+					return results;
+				}
+				count++;
+			}
+		}
+		return results;
 	}
 
 	public int biggestGain(double[] branchEntropy, double totalEntropy){
