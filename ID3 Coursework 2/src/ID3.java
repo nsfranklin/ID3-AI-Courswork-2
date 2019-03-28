@@ -105,27 +105,33 @@ class ID3 {
 	public void train(String[][] trainingData) {
 		indexStrings(trainingData);
 		String[][] dataSansHeader = removeHeader(trainingData);
-		recursiveTrainingmethod(dataSansHeader);
+		decisionTree = recursiveTrainingmethod(dataSansHeader);
 	}
 
-	public void recursiveTrainingmethod(String[][] data){
+	public TreeNode recursiveTrainingmethod(String[][] data){
 		int activeColumn = 0;
 		double totalEntropy = calcTotalEntropy(data);
-		System.out.println("Total Level Entropy: " + totalEntropy);
-		if(totalEntropy == 0){
-			return;
-		}
+		System.out.println("Total Level Entropy: " + totalEntropy + " | Total Values " + data.length);
+		ArrayList<TreeNode> returnedTreeNode = new ArrayList<>();
 		double[] branchEntropy = calcBranchEntropy(data);
 		activeColumn = biggestGain(branchEntropy, totalEntropy);
+		if(totalEntropy == 0){
+			return new TreeNode(null, 0 );
+		}
 		//System.out.println("Active Column: " + activeColumn);
 		ArrayList<String[][]> branchifiedData = new ArrayList<>();
 		branchifiedData = branchifyData(data, activeColumn);
 		//System.out.println(data[0].length + " " + branchifiedData.size());
 		if(data[0].length > 2) {
 			for (int i = 0; i < branchifiedData.size(); i++) {
-				recursiveTrainingmethod(branchifiedData.get(i));
+				returnedTreeNode.add(recursiveTrainingmethod(branchifiedData.get(i)));
 			}
 		}
+		TreeNode[] childAtLevel = new TreeNode[returnedTreeNode.size()];
+		for(int i = 0 ; i < returnedTreeNode.size() ; i++){
+			childAtLevel[i] = returnedTreeNode.get(i);
+		}
+		return new TreeNode(childAtLevel, activeColumn);
 
 	}
 

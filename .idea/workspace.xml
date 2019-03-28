@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java" line="226" />
+    <bookmark url="file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java" line="232" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7f62777-efd6-42db-9cf6-d8992393e1a4" name="Default" comment="" />
@@ -17,31 +17,29 @@
       <file leaf-file-name="ID3.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="115" column="19" lean-forward="true" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
+            <state relative-caret-position="1029">
+              <caret line="118" column="39" lean-forward="false" selection-start-line="118" selection-start-column="39" selection-end-line="118" selection-end-column="39" />
               <folding>
                 <element signature="method#biggestGain#0;class#ID3#0" expanded="false" />
                 <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-                <element signature="e#5095#5103#0" expanded="true" />
-                <element signature="e#5166#5188#0" expanded="true" />
                 <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
                 <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
-                <element signature="e#8011#8012#0" expanded="true" />
-                <element signature="e#8029#8030#0" expanded="true" />
+                <element signature="e#8392#8393#0" expanded="true" />
+                <element signature="e#8410#8411#0" expanded="true" />
                 <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
                 <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
                 <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
                 <element signature="method#indexStrings#0;class#ID3#0" expanded="false" />
                 <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
                 <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
-                <element signature="e#12619#12620#0" expanded="true" />
-                <element signature="e#12654#12655#0" expanded="true" />
-                <element signature="e#12680#12681#0" expanded="true" />
-                <element signature="e#12714#12715#0" expanded="true" />
-                <element signature="e#12739#12740#0" expanded="true" />
-                <element signature="e#12778#12779#0" expanded="true" />
-                <element signature="e#12943#12944#0" expanded="true" />
-                <element signature="e#12977#12978#0" expanded="true" />
+                <element signature="e#13000#13001#0" expanded="true" />
+                <element signature="e#13035#13036#0" expanded="true" />
+                <element signature="e#13061#13062#0" expanded="true" />
+                <element signature="e#13095#13096#0" expanded="true" />
+                <element signature="e#13120#13121#0" expanded="true" />
+                <element signature="e#13159#13160#0" expanded="true" />
+                <element signature="e#13324#13325#0" expanded="true" />
+                <element signature="e#13358#13359#0" expanded="true" />
                 <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
               </folding>
             </state>
@@ -95,8 +93,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
-    <option name="width" value="1936" />
+    <option name="x" value="1600" />
+    <option name="width" value="2248" />
     <option name="height" value="2118" />
   </component>
   <component name="ProjectView">
@@ -114,7 +112,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -131,12 +128,6 @@
               <item name="ID3-AI-Courswork-2" type="b2602c69:ProjectViewProjectNode" />
               <item name="ID3-AI-Courswork-2" type="462c0819:PsiDirectoryNode" />
               <item name="ID3 Coursework 2" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ID3-AI-Courswork-2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ID3-AI-Courswork-2" type="462c0819:PsiDirectoryNode" />
-              <item name="ID3 Coursework 2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -147,9 +138,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -159,12 +151,13 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Git\ID3\ID3-AI-Courswork-2\ID3 Coursework 2" />
       <recent name="C:\Git\ID3\ID3-AI-Courswork-2\ID3 Coursework 2\src" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Git\ID3\ID3-AI-Courswork-2\ID3 Coursework 2\out\production\ID3 Coursework 2\production\ID3-AI-Courswork-2" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Git\ID3\ID3-AI-Courswork-2\ID3 Coursework 2" />
       <recent name="C:\Git\ID3\ID3-AI-Courswork-2\ID3 Coursework 2\src" />
     </key>
   </component>
@@ -299,7 +292,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="0" width="1936" height="2118" extended-state="0" />
+    <frame x="1600" y="0" width="2248" height="2118" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -310,12 +303,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296315" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46996465" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2281676" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13555788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11659193" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -343,31 +336,31 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java</url>
-          <line>260</line>
+          <line>266</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java</url>
-          <line>407</line>
+          <line>413</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java</url>
-          <line>257</line>
+          <line>263</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java</url>
-          <line>187</line>
+          <line>193</line>
           <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java</url>
-          <line>202</line>
+          <line>208</line>
           <properties class="ID3" method="removeColumn">
             <option name="EMULATED" value="true" />
           </properties>
@@ -375,7 +368,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java</url>
-          <line>230</line>
+          <line>236</line>
           <properties class="ID3" method="containsAttribute">
             <option name="EMULATED" value="true" />
           </properties>
@@ -394,26 +387,24 @@
           <folding>
             <element signature="method#biggestGain#0;class#ID3#0" expanded="false" />
             <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-            <element signature="e#5095#5103#0" expanded="true" />
-            <element signature="e#5166#5188#0" expanded="true" />
             <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
             <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
-            <element signature="e#8011#8012#0" expanded="true" />
-            <element signature="e#8029#8030#0" expanded="true" />
+            <element signature="e#8392#8393#0" expanded="true" />
+            <element signature="e#8410#8411#0" expanded="true" />
             <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
             <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
             <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
             <element signature="method#indexStrings#0;class#ID3#0" expanded="false" />
             <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
-            <element signature="e#12619#12620#0" expanded="true" />
-            <element signature="e#12654#12655#0" expanded="true" />
-            <element signature="e#12680#12681#0" expanded="true" />
-            <element signature="e#12714#12715#0" expanded="true" />
-            <element signature="e#12739#12740#0" expanded="true" />
-            <element signature="e#12778#12779#0" expanded="true" />
-            <element signature="e#12943#12944#0" expanded="true" />
-            <element signature="e#12977#12978#0" expanded="true" />
+            <element signature="e#13000#13001#0" expanded="true" />
+            <element signature="e#13035#13036#0" expanded="true" />
+            <element signature="e#13061#13062#0" expanded="true" />
+            <element signature="e#13095#13096#0" expanded="true" />
+            <element signature="e#13120#13121#0" expanded="true" />
+            <element signature="e#13159#13160#0" expanded="true" />
+            <element signature="e#13324#13325#0" expanded="true" />
+            <element signature="e#13358#13359#0" expanded="true" />
             <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
           </folding>
         </state>
@@ -442,26 +433,24 @@
           <folding>
             <element signature="method#biggestGain#0;class#ID3#0" expanded="false" />
             <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-            <element signature="e#5095#5103#0" expanded="true" />
-            <element signature="e#5166#5188#0" expanded="true" />
             <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
             <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
-            <element signature="e#8011#8012#0" expanded="true" />
-            <element signature="e#8029#8030#0" expanded="true" />
+            <element signature="e#8392#8393#0" expanded="true" />
+            <element signature="e#8410#8411#0" expanded="true" />
             <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
             <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
             <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
             <element signature="method#indexStrings#0;class#ID3#0" expanded="false" />
             <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
-            <element signature="e#12619#12620#0" expanded="true" />
-            <element signature="e#12654#12655#0" expanded="true" />
-            <element signature="e#12680#12681#0" expanded="true" />
-            <element signature="e#12714#12715#0" expanded="true" />
-            <element signature="e#12739#12740#0" expanded="true" />
-            <element signature="e#12778#12779#0" expanded="true" />
-            <element signature="e#12943#12944#0" expanded="true" />
-            <element signature="e#12977#12978#0" expanded="true" />
+            <element signature="e#13000#13001#0" expanded="true" />
+            <element signature="e#13035#13036#0" expanded="true" />
+            <element signature="e#13061#13062#0" expanded="true" />
+            <element signature="e#13095#13096#0" expanded="true" />
+            <element signature="e#13120#13121#0" expanded="true" />
+            <element signature="e#13159#13160#0" expanded="true" />
+            <element signature="e#13324#13325#0" expanded="true" />
+            <element signature="e#13358#13359#0" expanded="true" />
             <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
           </folding>
         </state>
@@ -490,26 +479,70 @@
           <folding>
             <element signature="method#biggestGain#0;class#ID3#0" expanded="false" />
             <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-            <element signature="e#5095#5103#0" expanded="true" />
-            <element signature="e#5166#5188#0" expanded="true" />
             <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
             <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
-            <element signature="e#8011#8012#0" expanded="true" />
-            <element signature="e#8029#8030#0" expanded="true" />
+            <element signature="e#8392#8393#0" expanded="true" />
+            <element signature="e#8410#8411#0" expanded="true" />
             <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
             <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
             <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
             <element signature="method#indexStrings#0;class#ID3#0" expanded="false" />
             <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
-            <element signature="e#12619#12620#0" expanded="true" />
-            <element signature="e#12654#12655#0" expanded="true" />
-            <element signature="e#12680#12681#0" expanded="true" />
-            <element signature="e#12714#12715#0" expanded="true" />
-            <element signature="e#12739#12740#0" expanded="true" />
-            <element signature="e#12778#12779#0" expanded="true" />
-            <element signature="e#12943#12944#0" expanded="true" />
-            <element signature="e#12977#12978#0" expanded="true" />
+            <element signature="e#13000#13001#0" expanded="true" />
+            <element signature="e#13035#13036#0" expanded="true" />
+            <element signature="e#13061#13062#0" expanded="true" />
+            <element signature="e#13095#13096#0" expanded="true" />
+            <element signature="e#13120#13121#0" expanded="true" />
+            <element signature="e#13159#13160#0" expanded="true" />
+            <element signature="e#13324#13325#0" expanded="true" />
+            <element signature="e#13358#13359#0" expanded="true" />
+            <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ID3 Coursework 2/realEstateTrain.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ID3 Coursework 2/realEstateTest.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#biggestGain#0;class#ID3#0" expanded="false" />
+            <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
+            <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
+            <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
+            <element signature="e#8392#8393#0" expanded="true" />
+            <element signature="e#8410#8411#0" expanded="true" />
+            <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
+            <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
+            <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
+            <element signature="method#indexStrings#0;class#ID3#0" expanded="false" />
+            <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
+            <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
+            <element signature="e#13000#13001#0" expanded="true" />
+            <element signature="e#13035#13036#0" expanded="true" />
+            <element signature="e#13061#13062#0" expanded="true" />
+            <element signature="e#13095#13096#0" expanded="true" />
+            <element signature="e#13120#13121#0" expanded="true" />
+            <element signature="e#13159#13160#0" expanded="true" />
+            <element signature="e#13324#13325#0" expanded="true" />
+            <element signature="e#13358#13359#0" expanded="true" />
             <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
           </folding>
         </state>
@@ -538,26 +571,24 @@
           <folding>
             <element signature="method#biggestGain#0;class#ID3#0" expanded="false" />
             <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-            <element signature="e#5095#5103#0" expanded="true" />
-            <element signature="e#5166#5188#0" expanded="true" />
             <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
             <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
-            <element signature="e#8011#8012#0" expanded="true" />
-            <element signature="e#8029#8030#0" expanded="true" />
+            <element signature="e#8392#8393#0" expanded="true" />
+            <element signature="e#8410#8411#0" expanded="true" />
             <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
             <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
             <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
             <element signature="method#indexStrings#0;class#ID3#0" expanded="false" />
             <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
-            <element signature="e#12619#12620#0" expanded="true" />
-            <element signature="e#12654#12655#0" expanded="true" />
-            <element signature="e#12680#12681#0" expanded="true" />
-            <element signature="e#12714#12715#0" expanded="true" />
-            <element signature="e#12739#12740#0" expanded="true" />
-            <element signature="e#12778#12779#0" expanded="true" />
-            <element signature="e#12943#12944#0" expanded="true" />
-            <element signature="e#12977#12978#0" expanded="true" />
+            <element signature="e#13000#13001#0" expanded="true" />
+            <element signature="e#13035#13036#0" expanded="true" />
+            <element signature="e#13061#13062#0" expanded="true" />
+            <element signature="e#13095#13096#0" expanded="true" />
+            <element signature="e#13120#13121#0" expanded="true" />
+            <element signature="e#13159#13160#0" expanded="true" />
+            <element signature="e#13324#13325#0" expanded="true" />
+            <element signature="e#13358#13359#0" expanded="true" />
             <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
           </folding>
         </state>
@@ -586,26 +617,24 @@
           <folding>
             <element signature="method#biggestGain#0;class#ID3#0" expanded="false" />
             <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-            <element signature="e#5095#5103#0" expanded="true" />
-            <element signature="e#5166#5188#0" expanded="true" />
             <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
             <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
-            <element signature="e#8011#8012#0" expanded="true" />
-            <element signature="e#8029#8030#0" expanded="true" />
+            <element signature="e#8392#8393#0" expanded="true" />
+            <element signature="e#8410#8411#0" expanded="true" />
             <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
             <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
             <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
             <element signature="method#indexStrings#0;class#ID3#0" expanded="false" />
             <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
-            <element signature="e#12619#12620#0" expanded="true" />
-            <element signature="e#12654#12655#0" expanded="true" />
-            <element signature="e#12680#12681#0" expanded="true" />
-            <element signature="e#12714#12715#0" expanded="true" />
-            <element signature="e#12739#12740#0" expanded="true" />
-            <element signature="e#12778#12779#0" expanded="true" />
-            <element signature="e#12943#12944#0" expanded="true" />
-            <element signature="e#12977#12978#0" expanded="true" />
+            <element signature="e#13000#13001#0" expanded="true" />
+            <element signature="e#13035#13036#0" expanded="true" />
+            <element signature="e#13061#13062#0" expanded="true" />
+            <element signature="e#13095#13096#0" expanded="true" />
+            <element signature="e#13120#13121#0" expanded="true" />
+            <element signature="e#13159#13160#0" expanded="true" />
+            <element signature="e#13324#13325#0" expanded="true" />
+            <element signature="e#13358#13359#0" expanded="true" />
             <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
           </folding>
         </state>
@@ -634,26 +663,24 @@
           <folding>
             <element signature="method#biggestGain#0;class#ID3#0" expanded="false" />
             <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-            <element signature="e#5095#5103#0" expanded="true" />
-            <element signature="e#5166#5188#0" expanded="true" />
             <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
             <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
-            <element signature="e#8011#8012#0" expanded="true" />
-            <element signature="e#8029#8030#0" expanded="true" />
+            <element signature="e#8392#8393#0" expanded="true" />
+            <element signature="e#8410#8411#0" expanded="true" />
             <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
             <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
             <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
             <element signature="method#indexStrings#0;class#ID3#0" expanded="false" />
             <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
-            <element signature="e#12619#12620#0" expanded="true" />
-            <element signature="e#12654#12655#0" expanded="true" />
-            <element signature="e#12680#12681#0" expanded="true" />
-            <element signature="e#12714#12715#0" expanded="true" />
-            <element signature="e#12739#12740#0" expanded="true" />
-            <element signature="e#12778#12779#0" expanded="true" />
-            <element signature="e#12943#12944#0" expanded="true" />
-            <element signature="e#12977#12978#0" expanded="true" />
+            <element signature="e#13000#13001#0" expanded="true" />
+            <element signature="e#13035#13036#0" expanded="true" />
+            <element signature="e#13061#13062#0" expanded="true" />
+            <element signature="e#13095#13096#0" expanded="true" />
+            <element signature="e#13120#13121#0" expanded="true" />
+            <element signature="e#13159#13160#0" expanded="true" />
+            <element signature="e#13324#13325#0" expanded="true" />
+            <element signature="e#13358#13359#0" expanded="true" />
             <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
           </folding>
         </state>
@@ -666,28 +693,42 @@
           <folding>
             <element signature="method#biggestGain#0;class#ID3#0" expanded="false" />
             <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-            <element signature="e#5095#5103#0" expanded="true" />
-            <element signature="e#5166#5188#0" expanded="true" />
             <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
             <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
-            <element signature="e#8011#8012#0" expanded="true" />
-            <element signature="e#8029#8030#0" expanded="true" />
+            <element signature="e#8392#8393#0" expanded="true" />
+            <element signature="e#8410#8411#0" expanded="true" />
             <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
             <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
             <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
             <element signature="method#indexStrings#0;class#ID3#0" expanded="false" />
             <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
-            <element signature="e#12619#12620#0" expanded="true" />
-            <element signature="e#12654#12655#0" expanded="true" />
-            <element signature="e#12680#12681#0" expanded="true" />
-            <element signature="e#12714#12715#0" expanded="true" />
-            <element signature="e#12739#12740#0" expanded="true" />
-            <element signature="e#12778#12779#0" expanded="true" />
-            <element signature="e#12943#12944#0" expanded="true" />
-            <element signature="e#12977#12978#0" expanded="true" />
+            <element signature="e#13000#13001#0" expanded="true" />
+            <element signature="e#13035#13036#0" expanded="true" />
+            <element signature="e#13061#13062#0" expanded="true" />
+            <element signature="e#13095#13096#0" expanded="true" />
+            <element signature="e#13120#13121#0" expanded="true" />
+            <element signature="e#13159#13160#0" expanded="true" />
+            <element signature="e#13324#13325#0" expanded="true" />
+            <element signature="e#13358#13359#0" expanded="true" />
             <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ID3 Coursework 2/simpleTrain.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ID3 Coursework 2/simpleTest.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -709,31 +750,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="115" column="19" lean-forward="true" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
+        <state relative-caret-position="1029">
+          <caret line="118" column="39" lean-forward="false" selection-start-line="118" selection-start-column="39" selection-end-line="118" selection-end-column="39" />
           <folding>
             <element signature="method#biggestGain#0;class#ID3#0" expanded="false" />
             <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-            <element signature="e#5095#5103#0" expanded="true" />
-            <element signature="e#5166#5188#0" expanded="true" />
             <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
             <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
-            <element signature="e#8011#8012#0" expanded="true" />
-            <element signature="e#8029#8030#0" expanded="true" />
+            <element signature="e#8392#8393#0" expanded="true" />
+            <element signature="e#8410#8411#0" expanded="true" />
             <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
             <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
             <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
             <element signature="method#indexStrings#0;class#ID3#0" expanded="false" />
             <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
-            <element signature="e#12619#12620#0" expanded="true" />
-            <element signature="e#12654#12655#0" expanded="true" />
-            <element signature="e#12680#12681#0" expanded="true" />
-            <element signature="e#12714#12715#0" expanded="true" />
-            <element signature="e#12739#12740#0" expanded="true" />
-            <element signature="e#12778#12779#0" expanded="true" />
-            <element signature="e#12943#12944#0" expanded="true" />
-            <element signature="e#12977#12978#0" expanded="true" />
+            <element signature="e#13000#13001#0" expanded="true" />
+            <element signature="e#13035#13036#0" expanded="true" />
+            <element signature="e#13061#13062#0" expanded="true" />
+            <element signature="e#13095#13096#0" expanded="true" />
+            <element signature="e#13120#13121#0" expanded="true" />
+            <element signature="e#13159#13160#0" expanded="true" />
+            <element signature="e#13324#13325#0" expanded="true" />
+            <element signature="e#13358#13359#0" expanded="true" />
             <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
           </folding>
         </state>
