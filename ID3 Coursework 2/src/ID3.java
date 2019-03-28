@@ -104,58 +104,131 @@ class ID3 {
 
 	public void train(String[][] trainingData) {
 		indexStrings(trainingData);
-		int activeColumn = 0;
 		String[][] dataSansHeader = removeHeader(trainingData);
-		double totalEntropy = calcTotalEntropy(dataSansHeader);
-		double[] branchEntropy = calcBranchEntropy(dataSansHeader);
+		recursiveTrainingmethod(dataSansHeader);
+	}
 
-		branchifyData(trainingData, activeColumn);
+	public void recursiveTrainingmethod(String[][] data){
+		int activeColumn = 0;
+		double totalEntropy = calcTotalEntropy(data);
+		System.out.println("Total Level Entropy: " + totalEntropy);
+		if(totalEntropy == 0){
+			return;
+		}
+		double[] branchEntropy = calcBranchEntropy(data);
+		activeColumn = biggestGain(branchEntropy, totalEntropy);
+		//System.out.println("Active Column: " + activeColumn);
+		ArrayList<String[][]> branchifiedData = new ArrayList<>();
+		branchifiedData = branchifyData(data, activeColumn);
+		//System.out.println(data[0].length + " " + branchifiedData.size());
+		if(data[0].length > 2) {
+			for (int i = 0; i < branchifiedData.size(); i++) {
+				recursiveTrainingmethod(branchifiedData.get(i));
+			}
+		}
 
 	}
 
+	public int biggestGain(double[] branchEntropy, double totalEntropy){
+		int biggestGainCurrently = 0;
+		double gain = 1000;
+		for(int i = 0 ; i < branchEntropy.length ; i++){
+			if(totalEntropy - branchEntropy[i] < gain){
+				gain = totalEntropy - branchEntropy[i];
+				biggestGainCurrently = i;
+			}
+		}
+		return biggestGainCurrently;
+	}
+
 	public  double[] calcBranchEntropy(String[][] trainingData){
-		int numberOfAttributes = trainingData.length - 1;
+		int numberOfAttributes = trainingData[0].length - 1;
 		double[] results = new double[numberOfAttributes];
 		for(int i = 0 ; i < numberOfAttributes ; i++){
 			results[i] = calcAttributeEntropy(trainingData, i);
+		}
+		for(int j = 0 ; j < results.length ; j++){
+			System.out.println("Attribute " + j + ": " + results[j]);
 		}
 		return results;
 	}
 
 	public  double calcAttributeEntropy(String[][] data, int parameterColumn){ //
 		double result = 0;
-		ClassIncludingCountingListing classIncCountList = new ClassIncludingCountingListing<>();
 		int numberOfColumns = data[0].length;
+		CountingList<String> AttributeList = new CountingList<String>();
+		ArrayList<CountingList<String>> classList = new ArrayList<CountingList<String>>();
+		int attributePosition = 0;
+		double probabilityOfCurrent = 0;
 		for(int i = 0; i < data.length ; i++){
-			classIncCountList.add(data[i][parameterColumn], data[i][numberOfColumns-1]);
-			//System.out.println(data[i][parameterColumn]);
+			AttributeList.add(data[i][parameterColumn]);
+			attributePosition = AttributeList.find(data[i][parameterColumn]);
+			if(AttributeList.size() == classList.size()) {
+				//System.out.println(data[i][parameterColumn] + " at " + AttributeList.find(data[i][parameterColumn]));
+				classList.get(AttributeList.find(data[i][parameterColumn])).add(data[i][numberOfColumns-1]);
+			}else{
+				//System.out.println(data[i][parameterColumn] + " at " + AttributeList.find(data[i][parameterColumn]));
+				classList.add(new CountingList<String>());
+				classList.get(AttributeList.find(data[i][parameterColumn])).add(data[i][numberOfColumns-1]);
+			}
 		}
-		for(int j = 0 ; j < 3 ; j++){
-			System.out.println(classIncCountList.getClassLength(classIncCountList.getObj(parameterColumn)));
-			result = result + calcEntropyWithAdjustment(classIncCountList.getClassCount(classIncCountList.getObj(parameterColumn), j) , classIncCountList.getClassTotal(classIncCountList.getObj(parameterColumn)));
-			System.out.println(result + " " + j);
+		for(int j = 0 ; j < AttributeList.size() ; j++){
+			for(int k = 0 ; k < classList.get(j).size(); k++){
+				probabilityOfCurrent = (double)classList.get(j).get(k)/(double)AttributeList.total();
+				//System.out.println();
+				result = result + probabilityOfCurrent*calcEntropyWithAdjustment(classList.get(j).get(k) , classList.get(j).total());
+				//System.out.println("prob " + probabilityOfCurrent + " | result " + result + " | Count " + classList.get(j).get(k) + " | " + AttributeList.total());
+			}
+			//System.out.println("break");
 		}
 		return result;
 	}
 
-	public  ArrayList<String[][]> branchifyData(String[][] data, int column){
-		int count = 0;
-
-
-
-
-		String[][] result = (String[][])new Object[count][data[0].length-1];
-
+	public ArrayList<ArrayList<String[]>> splitifyData(String[][] data, int column){
+		ArrayList<ArrayList<String[]>> results = new ArrayList<>();
+		ArrayList<String> positionOfElements = new ArrayList<>();
 		for (int i = 0; i < data.length; i++) {
-			//if (containsAttribute(data[i])) {
-			//	for (int j = 0 ; j < data[0].length ; j++){
-			//	}
-			//}
+			if(positionOfElements.contains(data[i][column])){
+				results.get(positionOfElements.indexOf(data[i][column])).add(removeColumn(data[i], column));
+			}else{
+				positionOfElements.add(data[i][column]);
+				results.add(new ArrayList<String[]>());
+				results.get(positionOfElements.indexOf(data[i][column])).add(removeColumn(data[i], column));
+			}
 		}
-		return new ArrayList<String[][]>();
+
+		return results;
 	}
 
-	public  boolean containsAttribute(String[][] data){
+	public String[] removeColumn(String[] data, int column){
+		String[] results = new String[data.length-1];
+		for (int i = 0; i < data.length; i++) {
+			if(i < column) {
+				results[i] = data[i];
+			}
+			if(i > column){
+				results[i-1] = data[i];
+			}
+		}
+		return results;
+	}
+
+	public  ArrayList<String[][]> branchifyData(String[][] data, int column){
+		int count = 0;
+		ArrayList<String[][]> results = new ArrayList<>();
+		ArrayList<ArrayList<String[]>> splitData = splitifyData(data, column);
+		String[][] resultsTemp = new String[0][0];
+		for(int i = 0 ; i < splitData.size() ; i++){
+			resultsTemp = new String[splitData.get(i).size()][splitData.get(i).get(0).length];
+			for(int j = 0 ; j < splitData.get(i).size() ; j++){
+				resultsTemp[j] = splitData.get(i).get(j);
+			}
+			results.add(resultsTemp);
+		}
+		return results;
+	}
+
+	public boolean containsAttribute(String[][] data){
 		return true;
 	}
 
@@ -168,7 +241,7 @@ class ID3 {
 		}
 		for(int j = 0 ; j < countingList.length ; j++ ){
 			result = result + calcEntropyWithAdjustment(countingList.get(j),countingList.total());
-			System.out.println(result);
+			//System.out.println(result);
 		}
 		return result;
 	}
@@ -180,15 +253,6 @@ class ID3 {
 			}
 		}
 		return temp;
-	}
-	public  double calcEntropyOfCountingList(CountingList list){
-		double result = -1;
-		for(int i = 0 ; i < list.length ; i++){
-
-
-		}
-
-		return result;
 	}
 	public double calcEntropyWithAdjustment(int count, int total){
 		if(count > total){
@@ -304,7 +368,7 @@ class CountingList<E>{
 
 	public int getByOb(E ob){
 		int indexInContent = listOfContent.indexOf(ob);
-		if(indexInContent > 0){
+		if(indexInContent >= 0){
 			return countOfContent.get(indexInContent);
 		}
 		return indexInContent;
@@ -318,12 +382,26 @@ class CountingList<E>{
 		return listOfContent.get(i);
 	}
 
+	public int find(E ob){
+		return listOfContent.indexOf(ob);
+	}
+
 	public int total() {
 		int total = 0;
 		for (int i = 0 ; i < length ; i++) {
 			total = total + countOfContent.get(i);
 		}
 		return total;
+	}
+
+	public int size(){
+		return listOfContent.size();
+	}
+
+	public void print(){
+		for(int i = 0 ; i < listOfContent.size() ; i++){
+			System.out.println(listOfContent.get(i));
+		}
 	}
 
 }
