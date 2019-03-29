@@ -96,10 +96,20 @@ class ID3 {
 	 **/
 
 	public void classify(String[][] testData) {
+		for(int j = 0 ; j < testData.length ; j++) {
+			for(int k = 0 ; k <testData[j].length ; k++){
+				//System.out.println(testData[j][k]);
+			}
+		}
+		String[][] testDataSanHeader = removeHeader(testData);
 		if (decisionTree == null)
 			error("Please run training phase before classification");
-
-
+		String result = "";
+		for(int i = 0 ; i < testDataSanHeader.length ; i++){
+			result = recursiveClassify(decisionTree, testDataSanHeader[i]);
+			System.out.println(result);
+			result="";
+		}
 	} // classify()
 
 	public void train(String[][] trainingData) {
@@ -111,6 +121,30 @@ class ID3 {
 			columnsRemoved[i] = -1;
 		}
 		decisionTree = recursiveTrainingmethod(alteredData, columnsRemoved);
+	}
+
+	public String recursiveClassify(TreeNode tree, String[] rowToClassify){
+		String result = "!";
+		boolean foundInDicisionTree = false;
+		if(tree.children == null || tree.children.length == 0){
+			System.out.println("found null child");
+			return Integer.toString(tree.value);
+		}else{
+			for(int i = 0 ; i < tree.children.length ; i++) {
+				for(int j = 0 ; j < rowToClassify.length ; j++) {
+					System.out.println(rowToClassify[j] + " " + tree.children[i].value);
+					if (rowToClassify[j].equals(tree.children[i].value)) {
+						System.out.println(tree.children.length + "going level deeper");
+						foundInDicisionTree = true;
+						result = recursiveClassify(tree.children[i], rowToClassify);
+					}
+				}
+			}
+		}
+		if(!foundInDicisionTree){
+
+		}
+		return result;
 	}
 
 	public String[][] classNumberfier(String[][] data){
@@ -192,10 +226,11 @@ class ID3 {
 
 	public int biggestGain(double[] branchEntropy, double totalEntropy){
 		int biggestGainCurrently = 0;
-		double gain = 1000;
+		double gain = -1;
 		for(int i = 0 ; i < branchEntropy.length ; i++){
-			if(totalEntropy - branchEntropy[i] < gain){
+			if(totalEntropy - branchEntropy[i] > gain){
 				gain = totalEntropy - branchEntropy[i];
+				//System.out.println(gain);
 				biggestGainCurrently = i;
 			}
 		}
