@@ -99,16 +99,8 @@ class ID3 {
 		//String[] TEST = {"No", "No", "Yes", "Yes", "Yes", "No", "Yes","No", "Yes", "Yes", "Yes", "Yes", "Yes","No"};
 		ArrayList<Integer> results = new ArrayList<>();
 
-
-		for(int k = 0 ; k < data.length ; k++){
-			for(int j = 0 ; j < data[k].length ; j++){
-				//System.out.print(data[k][j]);
-			}
-			//System.out.print("\n");
-		}
 		for(int i = 1 ; i < testData.length ; i++){
 			results.add(recursiveClassify(decisionTree, testData[i]));
-			//System.out.println(results.get(i));
 		}
 
 		for(int i = 0 ; i < testData.length-1 ; i++){
@@ -120,11 +112,11 @@ class ID3 {
 		}
 	} // classify()
 
-	public String classIntToString(int i){
+	public String classIntToString(int i){ //int to string of class
 		return strings[attributes-1][i];
 	}
 
-	public Integer recursiveClassify(TreeNode tree, String[] rowToClassify){
+	public Integer recursiveClassify(TreeNode tree, String[] rowToClassify){ //recursive method to determine data class
 		String results = "";
 		int count = -1;
 		int i = 0;
@@ -173,16 +165,7 @@ class ID3 {
 		return results;
 	}
 
-	public int findString(String test, int column){
-		for(int i =  0; i < strings[column].length; i++){
-			if(test.equals(strings[column][i])){
-				return i;
-			}
-		}
-		return -1;
-	}
-
-	public TreeNode recursiveTrainingmethod(String[][] data, Integer[] columnsRemoved){
+	public TreeNode recursiveTrainingmethod(String[][] data, Integer[] columnsRemoved){ //method recursively called to determine decision tree
 		int activeColumn = 0;
 		double totalEntropy = calcTotalEntropy(data);
 		//System.out.println("Total Level Entropy: " + totalEntropy + " | Total Values " + data.length);
@@ -213,7 +196,7 @@ class ID3 {
 		return new TreeNode(childAtLevel, compareIntArrays(columnsRemoved, columnsRemoveNow));
 	}
 
-	public int compareIntArrays(Integer[] oldColumn, Integer[] newColumn){
+	public int compareIntArrays(Integer[] oldColumn, Integer[] newColumn){ //
 		for(int i = 0 ; i < oldColumn.length ; i++){
 			//System.out.println(oldColumn[i] + " " + newColumn[i]);
 			if(oldColumn[i] != newColumn[i]){
@@ -223,7 +206,7 @@ class ID3 {
 		return -100;
 	}
 
-	public Integer[] calcRemoved(Integer[] data, int newInt){
+	public Integer[] calcRemoved(Integer[] data, int newInt){ //used to identify which attributes have been tested for and to correctly adject the index
 		int count = 0;
 		Integer[] results = new Integer[data.length];
 		for(int j = 0 ; j < data.length ; j++){
@@ -242,7 +225,7 @@ class ID3 {
 		return results;
 	}
 
-	public int biggestGain(double[] branchEntropy, double totalEntropy){
+	public int biggestGain(double[] branchEntropy, double totalEntropy){ //iterates over all the branch entropys to find greastest gain.(greatest reduction in entropy
 		int biggestGainCurrently = 0;
 		double gain = -1;
 		for(int i = 0 ; i < branchEntropy.length ; i++){
@@ -255,7 +238,7 @@ class ID3 {
 		return biggestGainCurrently;
 	}
 
-	public  double[] calcBranchEntropy(String[][] trainingData){
+	public  double[] calcBranchEntropy(String[][] trainingData){ //calculates entropy of each attribute
 		int numberOfAttributes = trainingData[0].length - 1;
 		double[] results = new double[numberOfAttributes];
 		for(int i = 0 ; i < numberOfAttributes ; i++){
@@ -267,7 +250,7 @@ class ID3 {
 		return results;
 	}
 
-	public  double calcAttributeEntropy(String[][] data, int parameterColumn){ //
+	public  double calcAttributeEntropy(String[][] data, int parameterColumn){ //calculate the entropy of a specified attribute (column)
 		double result = 0;
 		int numberOfColumns = data[0].length;
 		CountingList<String> AttributeList = new CountingList<String>();
@@ -298,7 +281,7 @@ class ID3 {
 		return result;
 	}
 
-	public ArrayList<ArrayList<String[]>> splitifyData(String[][] data, int column){
+	public ArrayList<ArrayList<String[]>> splitifyData(String[][] data, int column){ //splits the data set into Array list of strings for each attribute
 		ArrayList<ArrayList<String[]>> results = new ArrayList<>();
 		ArrayList<String> positionOfElements = new ArrayList<>();
 		for (int i = 0; i < data.length; i++) {
@@ -313,7 +296,7 @@ class ID3 {
 		return results;
 	}
 
-	public String[] removeColumn(String[] data, int column){
+	public String[] removeColumn(String[] data, int column){ //returns array with specified column removed
 		String[] results = new String[data.length-1];
 		for (int i = 0; i < data.length; i++) {
 			if(i < column) {
@@ -326,7 +309,7 @@ class ID3 {
 		return results;
 	}
 
-	public ArrayList<String[][]> branchifyData(String[][] data, int column){
+	public ArrayList<String[][]> branchifyData(String[][] data, int column){ //recombines splitafied data into String[][] to be trained on recursively
 		int count = 0;
 		ArrayList<String[][]> results = new ArrayList<>();
 		ArrayList<ArrayList<String[]>> splitData = splitifyData(data, column);
@@ -341,11 +324,7 @@ class ID3 {
 		return results;
 	}
 
-	public boolean containsAttribute(String[][] data){
-		return true;
-	}
-
-	public double calcTotalEntropy(String[][] data){
+	public double calcTotalEntropy(String[][] data){ //calculates the total entropy of a data set
 		double result = 0;
 		CountingList<String> countingList = new CountingList<>();
 		int numberOfColumns = data[0].length;
@@ -358,7 +337,7 @@ class ID3 {
 		}
 		return result;
 	}
-	public  String[][] removeHeader(String[][] trainingData){
+	public  String[][] removeHeader(String[][] trainingData){ //remove the first row of an array of arrays.
 		String[][] temp = new String[trainingData.length-1][trainingData[0].length];
 		for(int i = 1; i < trainingData.length ; i++){
 			for(int j = 0 ; j < trainingData[0].length ; j++){
@@ -367,7 +346,7 @@ class ID3 {
 		}
 		return temp;
 	}
-	public double calcEntropyWithAdjustment(int count, int total){
+	public double calcEntropyWithAdjustment(int count, int total){ //calculates the entropy. given a value and the total number of values.
 		if(count > total){
 			System.out.println("Count larger than total. What are you doing mug.");
 		}
@@ -571,13 +550,7 @@ class ClassIncludingCountingListing<E> extends CountingList{
 		}
 	}
 }
-class StringTree {
 
-	StringTree[] children;
-	String Value;
-
-
-}
 
 
 
