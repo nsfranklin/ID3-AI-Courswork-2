@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java" line="343" />
+    <bookmark url="file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java" line="300" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7f62777-efd6-42db-9cf6-d8992393e1a4" name="Default" comment="" />
@@ -55,33 +55,33 @@
       <file leaf-file-name="ID3.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1031">
-              <caret line="131" column="8" lean-forward="false" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="8" />
+            <state relative-caret-position="611">
+              <caret line="101" column="8" lean-forward="false" selection-start-line="101" selection-start-column="8" selection-end-line="101" selection-end-column="8" />
               <folding>
                 <element signature="method#train#0;class#ID3#0" expanded="false" />
                 <element signature="method#classNumberfier#0;class#ID3#0" expanded="false" />
                 <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-                <element signature="e#9216#9224#0" expanded="true" />
-                <element signature="e#9287#9309#0" expanded="true" />
+                <element signature="e#7585#7593#0" expanded="true" />
+                <element signature="e#7656#7678#0" expanded="true" />
                 <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
                 <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
                 <element signature="method#branchifyData#0;class#ID3#0" expanded="false" />
-                <element signature="e#12131#12132#0" expanded="true" />
-                <element signature="e#12149#12150#0" expanded="true" />
+                <element signature="e#10500#10501#0" expanded="true" />
+                <element signature="e#10518#10519#0" expanded="true" />
                 <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
                 <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
                 <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
                 <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
                 <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
                 <element signature="class#CountingList#0" expanded="false" />
-                <element signature="e#16739#16740#0" expanded="true" />
-                <element signature="e#16774#16775#0" expanded="true" />
-                <element signature="e#16800#16801#0" expanded="true" />
-                <element signature="e#16834#16835#0" expanded="true" />
-                <element signature="e#16859#16860#0" expanded="true" />
-                <element signature="e#16898#16899#0" expanded="true" />
-                <element signature="e#17063#17064#0" expanded="true" />
-                <element signature="e#17097#17098#0" expanded="true" />
+                <element signature="e#15108#15109#0" expanded="true" />
+                <element signature="e#15143#15144#0" expanded="true" />
+                <element signature="e#15169#15170#0" expanded="true" />
+                <element signature="e#15203#15204#0" expanded="true" />
+                <element signature="e#15228#15229#0" expanded="true" />
+                <element signature="e#15267#15268#0" expanded="true" />
+                <element signature="e#15432#15433#0" expanded="true" />
+                <element signature="e#15466#15467#0" expanded="true" />
                 <element signature="method#print#0;class#CountingList#0" expanded="false" />
                 <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
               </folding>
@@ -355,36 +355,31 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java</url>
-          <line>105</line>
-          <properties />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java</url>
-          <line>377</line>
+          <line>334</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java</url>
-          <line>524</line>
+          <line>481</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java</url>
-          <line>305</line>
+          <line>262</line>
           <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java</url>
-          <line>163</line>
+          <line>120</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java</url>
-          <line>319</line>
+          <line>276</line>
           <properties class="ID3" method="removeColumn">
             <option name="EMULATED" value="true" />
           </properties>
@@ -392,7 +387,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java</url>
-          <line>347</line>
+          <line>304</line>
           <properties class="ID3" method="containsAttribute">
             <option name="EMULATED" value="true" />
           </properties>
@@ -400,7 +395,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java</url>
-          <line>119</line>
+          <line>104</line>
           <properties class="ID3" method="train">
             <option name="EMULATED" value="true" />
           </properties>
@@ -420,27 +415,27 @@
             <element signature="method#train#0;class#ID3#0" expanded="false" />
             <element signature="method#classNumberfier#0;class#ID3#0" expanded="false" />
             <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-            <element signature="e#9216#9224#0" expanded="true" />
-            <element signature="e#9287#9309#0" expanded="true" />
+            <element signature="e#7585#7593#0" expanded="true" />
+            <element signature="e#7656#7678#0" expanded="true" />
             <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
             <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
             <element signature="method#branchifyData#0;class#ID3#0" expanded="false" />
-            <element signature="e#12131#12132#0" expanded="true" />
-            <element signature="e#12149#12150#0" expanded="true" />
+            <element signature="e#10500#10501#0" expanded="true" />
+            <element signature="e#10518#10519#0" expanded="true" />
             <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
             <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
             <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
             <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="class#CountingList#0" expanded="false" />
-            <element signature="e#16739#16740#0" expanded="true" />
-            <element signature="e#16774#16775#0" expanded="true" />
-            <element signature="e#16800#16801#0" expanded="true" />
-            <element signature="e#16834#16835#0" expanded="true" />
-            <element signature="e#16859#16860#0" expanded="true" />
-            <element signature="e#16898#16899#0" expanded="true" />
-            <element signature="e#17063#17064#0" expanded="true" />
-            <element signature="e#17097#17098#0" expanded="true" />
+            <element signature="e#15108#15109#0" expanded="true" />
+            <element signature="e#15143#15144#0" expanded="true" />
+            <element signature="e#15169#15170#0" expanded="true" />
+            <element signature="e#15203#15204#0" expanded="true" />
+            <element signature="e#15228#15229#0" expanded="true" />
+            <element signature="e#15267#15268#0" expanded="true" />
+            <element signature="e#15432#15433#0" expanded="true" />
+            <element signature="e#15466#15467#0" expanded="true" />
             <element signature="method#print#0;class#CountingList#0" expanded="false" />
             <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
           </folding>
@@ -471,27 +466,27 @@
             <element signature="method#train#0;class#ID3#0" expanded="false" />
             <element signature="method#classNumberfier#0;class#ID3#0" expanded="false" />
             <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-            <element signature="e#9216#9224#0" expanded="true" />
-            <element signature="e#9287#9309#0" expanded="true" />
+            <element signature="e#7585#7593#0" expanded="true" />
+            <element signature="e#7656#7678#0" expanded="true" />
             <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
             <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
             <element signature="method#branchifyData#0;class#ID3#0" expanded="false" />
-            <element signature="e#12131#12132#0" expanded="true" />
-            <element signature="e#12149#12150#0" expanded="true" />
+            <element signature="e#10500#10501#0" expanded="true" />
+            <element signature="e#10518#10519#0" expanded="true" />
             <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
             <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
             <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
             <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="class#CountingList#0" expanded="false" />
-            <element signature="e#16739#16740#0" expanded="true" />
-            <element signature="e#16774#16775#0" expanded="true" />
-            <element signature="e#16800#16801#0" expanded="true" />
-            <element signature="e#16834#16835#0" expanded="true" />
-            <element signature="e#16859#16860#0" expanded="true" />
-            <element signature="e#16898#16899#0" expanded="true" />
-            <element signature="e#17063#17064#0" expanded="true" />
-            <element signature="e#17097#17098#0" expanded="true" />
+            <element signature="e#15108#15109#0" expanded="true" />
+            <element signature="e#15143#15144#0" expanded="true" />
+            <element signature="e#15169#15170#0" expanded="true" />
+            <element signature="e#15203#15204#0" expanded="true" />
+            <element signature="e#15228#15229#0" expanded="true" />
+            <element signature="e#15267#15268#0" expanded="true" />
+            <element signature="e#15432#15433#0" expanded="true" />
+            <element signature="e#15466#15467#0" expanded="true" />
             <element signature="method#print#0;class#CountingList#0" expanded="false" />
             <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
           </folding>
@@ -522,27 +517,27 @@
             <element signature="method#train#0;class#ID3#0" expanded="false" />
             <element signature="method#classNumberfier#0;class#ID3#0" expanded="false" />
             <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-            <element signature="e#9216#9224#0" expanded="true" />
-            <element signature="e#9287#9309#0" expanded="true" />
+            <element signature="e#7585#7593#0" expanded="true" />
+            <element signature="e#7656#7678#0" expanded="true" />
             <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
             <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
             <element signature="method#branchifyData#0;class#ID3#0" expanded="false" />
-            <element signature="e#12131#12132#0" expanded="true" />
-            <element signature="e#12149#12150#0" expanded="true" />
+            <element signature="e#10500#10501#0" expanded="true" />
+            <element signature="e#10518#10519#0" expanded="true" />
             <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
             <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
             <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
             <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="class#CountingList#0" expanded="false" />
-            <element signature="e#16739#16740#0" expanded="true" />
-            <element signature="e#16774#16775#0" expanded="true" />
-            <element signature="e#16800#16801#0" expanded="true" />
-            <element signature="e#16834#16835#0" expanded="true" />
-            <element signature="e#16859#16860#0" expanded="true" />
-            <element signature="e#16898#16899#0" expanded="true" />
-            <element signature="e#17063#17064#0" expanded="true" />
-            <element signature="e#17097#17098#0" expanded="true" />
+            <element signature="e#15108#15109#0" expanded="true" />
+            <element signature="e#15143#15144#0" expanded="true" />
+            <element signature="e#15169#15170#0" expanded="true" />
+            <element signature="e#15203#15204#0" expanded="true" />
+            <element signature="e#15228#15229#0" expanded="true" />
+            <element signature="e#15267#15268#0" expanded="true" />
+            <element signature="e#15432#15433#0" expanded="true" />
+            <element signature="e#15466#15467#0" expanded="true" />
             <element signature="method#print#0;class#CountingList#0" expanded="false" />
             <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
           </folding>
@@ -565,27 +560,27 @@
             <element signature="method#train#0;class#ID3#0" expanded="false" />
             <element signature="method#classNumberfier#0;class#ID3#0" expanded="false" />
             <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-            <element signature="e#9216#9224#0" expanded="true" />
-            <element signature="e#9287#9309#0" expanded="true" />
+            <element signature="e#7585#7593#0" expanded="true" />
+            <element signature="e#7656#7678#0" expanded="true" />
             <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
             <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
             <element signature="method#branchifyData#0;class#ID3#0" expanded="false" />
-            <element signature="e#12131#12132#0" expanded="true" />
-            <element signature="e#12149#12150#0" expanded="true" />
+            <element signature="e#10500#10501#0" expanded="true" />
+            <element signature="e#10518#10519#0" expanded="true" />
             <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
             <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
             <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
             <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="class#CountingList#0" expanded="false" />
-            <element signature="e#16739#16740#0" expanded="true" />
-            <element signature="e#16774#16775#0" expanded="true" />
-            <element signature="e#16800#16801#0" expanded="true" />
-            <element signature="e#16834#16835#0" expanded="true" />
-            <element signature="e#16859#16860#0" expanded="true" />
-            <element signature="e#16898#16899#0" expanded="true" />
-            <element signature="e#17063#17064#0" expanded="true" />
-            <element signature="e#17097#17098#0" expanded="true" />
+            <element signature="e#15108#15109#0" expanded="true" />
+            <element signature="e#15143#15144#0" expanded="true" />
+            <element signature="e#15169#15170#0" expanded="true" />
+            <element signature="e#15203#15204#0" expanded="true" />
+            <element signature="e#15228#15229#0" expanded="true" />
+            <element signature="e#15267#15268#0" expanded="true" />
+            <element signature="e#15432#15433#0" expanded="true" />
+            <element signature="e#15466#15467#0" expanded="true" />
             <element signature="method#print#0;class#CountingList#0" expanded="false" />
             <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
           </folding>
@@ -615,27 +610,27 @@
             <element signature="method#train#0;class#ID3#0" expanded="false" />
             <element signature="method#classNumberfier#0;class#ID3#0" expanded="false" />
             <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-            <element signature="e#9216#9224#0" expanded="true" />
-            <element signature="e#9287#9309#0" expanded="true" />
+            <element signature="e#7585#7593#0" expanded="true" />
+            <element signature="e#7656#7678#0" expanded="true" />
             <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
             <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
             <element signature="method#branchifyData#0;class#ID3#0" expanded="false" />
-            <element signature="e#12131#12132#0" expanded="true" />
-            <element signature="e#12149#12150#0" expanded="true" />
+            <element signature="e#10500#10501#0" expanded="true" />
+            <element signature="e#10518#10519#0" expanded="true" />
             <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
             <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
             <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
             <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="class#CountingList#0" expanded="false" />
-            <element signature="e#16739#16740#0" expanded="true" />
-            <element signature="e#16774#16775#0" expanded="true" />
-            <element signature="e#16800#16801#0" expanded="true" />
-            <element signature="e#16834#16835#0" expanded="true" />
-            <element signature="e#16859#16860#0" expanded="true" />
-            <element signature="e#16898#16899#0" expanded="true" />
-            <element signature="e#17063#17064#0" expanded="true" />
-            <element signature="e#17097#17098#0" expanded="true" />
+            <element signature="e#15108#15109#0" expanded="true" />
+            <element signature="e#15143#15144#0" expanded="true" />
+            <element signature="e#15169#15170#0" expanded="true" />
+            <element signature="e#15203#15204#0" expanded="true" />
+            <element signature="e#15228#15229#0" expanded="true" />
+            <element signature="e#15267#15268#0" expanded="true" />
+            <element signature="e#15432#15433#0" expanded="true" />
+            <element signature="e#15466#15467#0" expanded="true" />
             <element signature="method#print#0;class#CountingList#0" expanded="false" />
             <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
           </folding>
@@ -665,27 +660,27 @@
             <element signature="method#train#0;class#ID3#0" expanded="false" />
             <element signature="method#classNumberfier#0;class#ID3#0" expanded="false" />
             <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-            <element signature="e#9216#9224#0" expanded="true" />
-            <element signature="e#9287#9309#0" expanded="true" />
+            <element signature="e#7585#7593#0" expanded="true" />
+            <element signature="e#7656#7678#0" expanded="true" />
             <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
             <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
             <element signature="method#branchifyData#0;class#ID3#0" expanded="false" />
-            <element signature="e#12131#12132#0" expanded="true" />
-            <element signature="e#12149#12150#0" expanded="true" />
+            <element signature="e#10500#10501#0" expanded="true" />
+            <element signature="e#10518#10519#0" expanded="true" />
             <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
             <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
             <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
             <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="class#CountingList#0" expanded="false" />
-            <element signature="e#16739#16740#0" expanded="true" />
-            <element signature="e#16774#16775#0" expanded="true" />
-            <element signature="e#16800#16801#0" expanded="true" />
-            <element signature="e#16834#16835#0" expanded="true" />
-            <element signature="e#16859#16860#0" expanded="true" />
-            <element signature="e#16898#16899#0" expanded="true" />
-            <element signature="e#17063#17064#0" expanded="true" />
-            <element signature="e#17097#17098#0" expanded="true" />
+            <element signature="e#15108#15109#0" expanded="true" />
+            <element signature="e#15143#15144#0" expanded="true" />
+            <element signature="e#15169#15170#0" expanded="true" />
+            <element signature="e#15203#15204#0" expanded="true" />
+            <element signature="e#15228#15229#0" expanded="true" />
+            <element signature="e#15267#15268#0" expanded="true" />
+            <element signature="e#15432#15433#0" expanded="true" />
+            <element signature="e#15466#15467#0" expanded="true" />
             <element signature="method#print#0;class#CountingList#0" expanded="false" />
             <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
           </folding>
@@ -715,27 +710,27 @@
             <element signature="method#train#0;class#ID3#0" expanded="false" />
             <element signature="method#classNumberfier#0;class#ID3#0" expanded="false" />
             <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-            <element signature="e#9216#9224#0" expanded="true" />
-            <element signature="e#9287#9309#0" expanded="true" />
+            <element signature="e#7585#7593#0" expanded="true" />
+            <element signature="e#7656#7678#0" expanded="true" />
             <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
             <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
             <element signature="method#branchifyData#0;class#ID3#0" expanded="false" />
-            <element signature="e#12131#12132#0" expanded="true" />
-            <element signature="e#12149#12150#0" expanded="true" />
+            <element signature="e#10500#10501#0" expanded="true" />
+            <element signature="e#10518#10519#0" expanded="true" />
             <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
             <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
             <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
             <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="class#CountingList#0" expanded="false" />
-            <element signature="e#16739#16740#0" expanded="true" />
-            <element signature="e#16774#16775#0" expanded="true" />
-            <element signature="e#16800#16801#0" expanded="true" />
-            <element signature="e#16834#16835#0" expanded="true" />
-            <element signature="e#16859#16860#0" expanded="true" />
-            <element signature="e#16898#16899#0" expanded="true" />
-            <element signature="e#17063#17064#0" expanded="true" />
-            <element signature="e#17097#17098#0" expanded="true" />
+            <element signature="e#15108#15109#0" expanded="true" />
+            <element signature="e#15143#15144#0" expanded="true" />
+            <element signature="e#15169#15170#0" expanded="true" />
+            <element signature="e#15203#15204#0" expanded="true" />
+            <element signature="e#15228#15229#0" expanded="true" />
+            <element signature="e#15267#15268#0" expanded="true" />
+            <element signature="e#15432#15433#0" expanded="true" />
+            <element signature="e#15466#15467#0" expanded="true" />
             <element signature="method#print#0;class#CountingList#0" expanded="false" />
             <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
           </folding>
@@ -765,27 +760,27 @@
             <element signature="method#train#0;class#ID3#0" expanded="false" />
             <element signature="method#classNumberfier#0;class#ID3#0" expanded="false" />
             <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-            <element signature="e#9216#9224#0" expanded="true" />
-            <element signature="e#9287#9309#0" expanded="true" />
+            <element signature="e#7585#7593#0" expanded="true" />
+            <element signature="e#7656#7678#0" expanded="true" />
             <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
             <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
             <element signature="method#branchifyData#0;class#ID3#0" expanded="false" />
-            <element signature="e#12131#12132#0" expanded="true" />
-            <element signature="e#12149#12150#0" expanded="true" />
+            <element signature="e#10500#10501#0" expanded="true" />
+            <element signature="e#10518#10519#0" expanded="true" />
             <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
             <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
             <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
             <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="class#CountingList#0" expanded="false" />
-            <element signature="e#16739#16740#0" expanded="true" />
-            <element signature="e#16774#16775#0" expanded="true" />
-            <element signature="e#16800#16801#0" expanded="true" />
-            <element signature="e#16834#16835#0" expanded="true" />
-            <element signature="e#16859#16860#0" expanded="true" />
-            <element signature="e#16898#16899#0" expanded="true" />
-            <element signature="e#17063#17064#0" expanded="true" />
-            <element signature="e#17097#17098#0" expanded="true" />
+            <element signature="e#15108#15109#0" expanded="true" />
+            <element signature="e#15143#15144#0" expanded="true" />
+            <element signature="e#15169#15170#0" expanded="true" />
+            <element signature="e#15203#15204#0" expanded="true" />
+            <element signature="e#15228#15229#0" expanded="true" />
+            <element signature="e#15267#15268#0" expanded="true" />
+            <element signature="e#15432#15433#0" expanded="true" />
+            <element signature="e#15466#15467#0" expanded="true" />
             <element signature="method#print#0;class#CountingList#0" expanded="false" />
             <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
           </folding>
@@ -815,27 +810,27 @@
             <element signature="method#train#0;class#ID3#0" expanded="false" />
             <element signature="method#classNumberfier#0;class#ID3#0" expanded="false" />
             <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-            <element signature="e#9216#9224#0" expanded="true" />
-            <element signature="e#9287#9309#0" expanded="true" />
+            <element signature="e#7585#7593#0" expanded="true" />
+            <element signature="e#7656#7678#0" expanded="true" />
             <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
             <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
             <element signature="method#branchifyData#0;class#ID3#0" expanded="false" />
-            <element signature="e#12131#12132#0" expanded="true" />
-            <element signature="e#12149#12150#0" expanded="true" />
+            <element signature="e#10500#10501#0" expanded="true" />
+            <element signature="e#10518#10519#0" expanded="true" />
             <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
             <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
             <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
             <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="class#CountingList#0" expanded="false" />
-            <element signature="e#16739#16740#0" expanded="true" />
-            <element signature="e#16774#16775#0" expanded="true" />
-            <element signature="e#16800#16801#0" expanded="true" />
-            <element signature="e#16834#16835#0" expanded="true" />
-            <element signature="e#16859#16860#0" expanded="true" />
-            <element signature="e#16898#16899#0" expanded="true" />
-            <element signature="e#17063#17064#0" expanded="true" />
-            <element signature="e#17097#17098#0" expanded="true" />
+            <element signature="e#15108#15109#0" expanded="true" />
+            <element signature="e#15143#15144#0" expanded="true" />
+            <element signature="e#15169#15170#0" expanded="true" />
+            <element signature="e#15203#15204#0" expanded="true" />
+            <element signature="e#15228#15229#0" expanded="true" />
+            <element signature="e#15267#15268#0" expanded="true" />
+            <element signature="e#15432#15433#0" expanded="true" />
+            <element signature="e#15466#15467#0" expanded="true" />
             <element signature="method#print#0;class#CountingList#0" expanded="false" />
             <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
           </folding>
@@ -865,27 +860,27 @@
             <element signature="method#train#0;class#ID3#0" expanded="false" />
             <element signature="method#classNumberfier#0;class#ID3#0" expanded="false" />
             <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-            <element signature="e#9216#9224#0" expanded="true" />
-            <element signature="e#9287#9309#0" expanded="true" />
+            <element signature="e#7585#7593#0" expanded="true" />
+            <element signature="e#7656#7678#0" expanded="true" />
             <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
             <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
             <element signature="method#branchifyData#0;class#ID3#0" expanded="false" />
-            <element signature="e#12131#12132#0" expanded="true" />
-            <element signature="e#12149#12150#0" expanded="true" />
+            <element signature="e#10500#10501#0" expanded="true" />
+            <element signature="e#10518#10519#0" expanded="true" />
             <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
             <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
             <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
             <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="class#CountingList#0" expanded="false" />
-            <element signature="e#16739#16740#0" expanded="true" />
-            <element signature="e#16774#16775#0" expanded="true" />
-            <element signature="e#16800#16801#0" expanded="true" />
-            <element signature="e#16834#16835#0" expanded="true" />
-            <element signature="e#16859#16860#0" expanded="true" />
-            <element signature="e#16898#16899#0" expanded="true" />
-            <element signature="e#17063#17064#0" expanded="true" />
-            <element signature="e#17097#17098#0" expanded="true" />
+            <element signature="e#15108#15109#0" expanded="true" />
+            <element signature="e#15143#15144#0" expanded="true" />
+            <element signature="e#15169#15170#0" expanded="true" />
+            <element signature="e#15203#15204#0" expanded="true" />
+            <element signature="e#15228#15229#0" expanded="true" />
+            <element signature="e#15267#15268#0" expanded="true" />
+            <element signature="e#15432#15433#0" expanded="true" />
+            <element signature="e#15466#15467#0" expanded="true" />
             <element signature="method#print#0;class#CountingList#0" expanded="false" />
             <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
           </folding>
@@ -915,27 +910,27 @@
             <element signature="method#train#0;class#ID3#0" expanded="false" />
             <element signature="method#classNumberfier#0;class#ID3#0" expanded="false" />
             <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-            <element signature="e#9216#9224#0" expanded="true" />
-            <element signature="e#9287#9309#0" expanded="true" />
+            <element signature="e#7585#7593#0" expanded="true" />
+            <element signature="e#7656#7678#0" expanded="true" />
             <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
             <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
             <element signature="method#branchifyData#0;class#ID3#0" expanded="false" />
-            <element signature="e#12131#12132#0" expanded="true" />
-            <element signature="e#12149#12150#0" expanded="true" />
+            <element signature="e#10500#10501#0" expanded="true" />
+            <element signature="e#10518#10519#0" expanded="true" />
             <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
             <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
             <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
             <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="class#CountingList#0" expanded="false" />
-            <element signature="e#16739#16740#0" expanded="true" />
-            <element signature="e#16774#16775#0" expanded="true" />
-            <element signature="e#16800#16801#0" expanded="true" />
-            <element signature="e#16834#16835#0" expanded="true" />
-            <element signature="e#16859#16860#0" expanded="true" />
-            <element signature="e#16898#16899#0" expanded="true" />
-            <element signature="e#17063#17064#0" expanded="true" />
-            <element signature="e#17097#17098#0" expanded="true" />
+            <element signature="e#15108#15109#0" expanded="true" />
+            <element signature="e#15143#15144#0" expanded="true" />
+            <element signature="e#15169#15170#0" expanded="true" />
+            <element signature="e#15203#15204#0" expanded="true" />
+            <element signature="e#15228#15229#0" expanded="true" />
+            <element signature="e#15267#15268#0" expanded="true" />
+            <element signature="e#15432#15433#0" expanded="true" />
+            <element signature="e#15466#15467#0" expanded="true" />
             <element signature="method#print#0;class#CountingList#0" expanded="false" />
             <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
           </folding>
@@ -950,27 +945,27 @@
             <element signature="method#train#0;class#ID3#0" expanded="false" />
             <element signature="method#classNumberfier#0;class#ID3#0" expanded="false" />
             <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-            <element signature="e#9216#9224#0" expanded="true" />
-            <element signature="e#9287#9309#0" expanded="true" />
+            <element signature="e#7585#7593#0" expanded="true" />
+            <element signature="e#7656#7678#0" expanded="true" />
             <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
             <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
             <element signature="method#branchifyData#0;class#ID3#0" expanded="false" />
-            <element signature="e#12131#12132#0" expanded="true" />
-            <element signature="e#12149#12150#0" expanded="true" />
+            <element signature="e#10500#10501#0" expanded="true" />
+            <element signature="e#10518#10519#0" expanded="true" />
             <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
             <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
             <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
             <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="class#CountingList#0" expanded="false" />
-            <element signature="e#16739#16740#0" expanded="true" />
-            <element signature="e#16774#16775#0" expanded="true" />
-            <element signature="e#16800#16801#0" expanded="true" />
-            <element signature="e#16834#16835#0" expanded="true" />
-            <element signature="e#16859#16860#0" expanded="true" />
-            <element signature="e#16898#16899#0" expanded="true" />
-            <element signature="e#17063#17064#0" expanded="true" />
-            <element signature="e#17097#17098#0" expanded="true" />
+            <element signature="e#15108#15109#0" expanded="true" />
+            <element signature="e#15143#15144#0" expanded="true" />
+            <element signature="e#15169#15170#0" expanded="true" />
+            <element signature="e#15203#15204#0" expanded="true" />
+            <element signature="e#15228#15229#0" expanded="true" />
+            <element signature="e#15267#15268#0" expanded="true" />
+            <element signature="e#15432#15433#0" expanded="true" />
+            <element signature="e#15466#15467#0" expanded="true" />
             <element signature="method#print#0;class#CountingList#0" expanded="false" />
             <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
           </folding>
@@ -1016,33 +1011,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ID3 Coursework 2/src/ID3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1031">
-          <caret line="131" column="8" lean-forward="false" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="8" />
+        <state relative-caret-position="611">
+          <caret line="101" column="8" lean-forward="false" selection-start-line="101" selection-start-column="8" selection-end-line="101" selection-end-column="8" />
           <folding>
             <element signature="method#train#0;class#ID3#0" expanded="false" />
             <element signature="method#classNumberfier#0;class#ID3#0" expanded="false" />
             <element signature="method#calcAttributeEntropy#0;class#ID3#0" expanded="false" />
-            <element signature="e#9216#9224#0" expanded="true" />
-            <element signature="e#9287#9309#0" expanded="true" />
+            <element signature="e#7585#7593#0" expanded="true" />
+            <element signature="e#7656#7678#0" expanded="true" />
             <element signature="method#splitifyData#0;class#ID3#0" expanded="false" />
             <element signature="method#removeColumn#0;class#ID3#0" expanded="false" />
             <element signature="method#branchifyData#0;class#ID3#0" expanded="false" />
-            <element signature="e#12131#12132#0" expanded="true" />
-            <element signature="e#12149#12150#0" expanded="true" />
+            <element signature="e#10500#10501#0" expanded="true" />
+            <element signature="e#10518#10519#0" expanded="true" />
             <element signature="method#calcTotalEntropy#0;class#ID3#0" expanded="false" />
             <element signature="method#removeHeader#0;class#ID3#0" expanded="false" />
             <element signature="method#calcEntropyWithAdjustment#0;class#ID3#0" expanded="false" />
             <element signature="docComment;method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="method#parseCSV#0;class#ID3#0" expanded="false" />
             <element signature="class#CountingList#0" expanded="false" />
-            <element signature="e#16739#16740#0" expanded="true" />
-            <element signature="e#16774#16775#0" expanded="true" />
-            <element signature="e#16800#16801#0" expanded="true" />
-            <element signature="e#16834#16835#0" expanded="true" />
-            <element signature="e#16859#16860#0" expanded="true" />
-            <element signature="e#16898#16899#0" expanded="true" />
-            <element signature="e#17063#17064#0" expanded="true" />
-            <element signature="e#17097#17098#0" expanded="true" />
+            <element signature="e#15108#15109#0" expanded="true" />
+            <element signature="e#15143#15144#0" expanded="true" />
+            <element signature="e#15169#15170#0" expanded="true" />
+            <element signature="e#15203#15204#0" expanded="true" />
+            <element signature="e#15228#15229#0" expanded="true" />
+            <element signature="e#15267#15268#0" expanded="true" />
+            <element signature="e#15432#15433#0" expanded="true" />
+            <element signature="e#15466#15467#0" expanded="true" />
             <element signature="method#print#0;class#CountingList#0" expanded="false" />
             <element signature="class#ClassIncludingCountingListing#0" expanded="false" />
           </folding>

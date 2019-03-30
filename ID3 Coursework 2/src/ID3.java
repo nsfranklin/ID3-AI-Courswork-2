@@ -97,24 +97,9 @@ class ID3 {
 
 	public void classify(String[][] testData) {
 		String[] TEST = {"No", "No", "Yes", "Yes", "Yes", "No", "Yes","No", "Yes", "Yes", "Yes", "Yes", "Yes","No"};
-		for(int j = 0 ; j < testData.length ; j++) {
-			for(int k = 0 ; k <testData[j].length ; k++){
-				//System.out.println(testData[j][k]);
-			}
-		}
-		String[][] testDataSanHeader = testData;
-		if (decisionTree == null)
-			error("Please run training phase before classification");
 
-		int result = -2;
-		for(int i = 0 ; i < testDataSanHeader.length ; i++){
-			result = recursiveClassify(decisionTree, testDataSanHeader[i], testData[0]);
-			if(result > -1) {
-				System.out.println(strings[strings.length - 1][result] + " - " + TEST[i]);
-			}else{
-				System.out.println("Error!" + " - " + TEST[i]);
-			}
-		}
+
+		
 	} // classify()
 
 	public void train(String[][] trainingData) {
@@ -129,35 +114,7 @@ class ID3 {
 	}
 
 	public int recursiveClassify(TreeNode tree, String[] rowToClassify, String[] header){
-		int result = -1;
-		int column = tree.value;
 
-		boolean foundInDicisionTree = false;
-		if(tree.children == null){
-			//System.out.println("found null child | " + tree.value);
-			return tree.value;
-		}else{
-			for(int k = 0 ; k < rowToClassify.length ; k++){
-				System.out.print(rowToClassify[k]);
-			}
-			System.out.println("");
-			System.out.println(rowToClassify[column] + " " + column + " " + data[0][tree.value]);
-			for(int i = 0 ; i < tree.children.length ; i++) {
-				System.out.print(findString(rowToClassify[column], column) + "|" + tree.children[i].value + " : ");
-				if (findString(rowToClassify[column], column) == tree.children[i].value) {
-					//System.out.println(tree.children.length + " going level deeper");
-					foundInDicisionTree = true;
-					//System.out.println("");
-					//System.out.println(tree.children[i].toString());
-					result = recursiveClassify(tree.children[i], rowToClassify, header);
-				}
-			}
-			System.out.println("");
-		}
-		if(!foundInDicisionTree){
-			result = -100;
-		}
-		return result;
 	}
 
 	public String[][] classNumberfier(String[][] data){
