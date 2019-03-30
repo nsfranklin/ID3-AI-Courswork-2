@@ -96,19 +96,24 @@ class ID3 {
 	 **/
 
 	public void classify(String[][] testData) {
+		String[] TEST = {"No", "No", "Yes", "Yes", "Yes", "No", "Yes","No", "Yes", "Yes", "Yes", "Yes", "Yes","No"};
 		for(int j = 0 ; j < testData.length ; j++) {
 			for(int k = 0 ; k <testData[j].length ; k++){
 				//System.out.println(testData[j][k]);
 			}
 		}
-		String[][] testDataSanHeader = removeHeader(testData);
+		String[][] testDataSanHeader = testData;
 		if (decisionTree == null)
 			error("Please run training phase before classification");
-		String result = "";
+
+		int result = -2;
 		for(int i = 0 ; i < testDataSanHeader.length ; i++){
-			result = recursiveClassify(decisionTree, testDataSanHeader[i]);
-			System.out.println(result);
-			result="";
+			result = recursiveClassify(decisionTree, testDataSanHeader[i], testData[0]);
+			if(result > -1) {
+				System.out.println(strings[strings.length - 1][result] + " - " + TEST[i]);
+			}else{
+				System.out.println("Error!" + " - " + TEST[i]);
+			}
 		}
 	} // classify()
 
@@ -123,26 +128,34 @@ class ID3 {
 		decisionTree = recursiveTrainingmethod(alteredData, columnsRemoved);
 	}
 
-	public String recursiveClassify(TreeNode tree, String[] rowToClassify){
-		String result = "!";
+	public int recursiveClassify(TreeNode tree, String[] rowToClassify, String[] header){
+		int result = -1;
+		int column = tree.value;
+
 		boolean foundInDicisionTree = false;
-		if(tree.children == null || tree.children.length == 0){
-			System.out.println("found null child");
-			return Integer.toString(tree.value);
+		if(tree.children == null){
+			//System.out.println("found null child | " + tree.value);
+			return tree.value;
 		}else{
+			for(int k = 0 ; k < rowToClassify.length ; k++){
+				System.out.print(rowToClassify[k]);
+			}
+			System.out.println("");
+			System.out.println(rowToClassify[column] + " " + column + " " + data[0][tree.value]);
 			for(int i = 0 ; i < tree.children.length ; i++) {
-				for(int j = 0 ; j < rowToClassify.length ; j++) {
-					System.out.println(rowToClassify[j] + " " + tree.children[i].value);
-					if (rowToClassify[j].equals(tree.children[i].value)) {
-						System.out.println(tree.children.length + "going level deeper");
-						foundInDicisionTree = true;
-						result = recursiveClassify(tree.children[i], rowToClassify);
-					}
+				System.out.print(findString(rowToClassify[column], column) + "|" + tree.children[i].value + " : ");
+				if (findString(rowToClassify[column], column) == tree.children[i].value) {
+					//System.out.println(tree.children.length + " going level deeper");
+					foundInDicisionTree = true;
+					//System.out.println("");
+					//System.out.println(tree.children[i].toString());
+					result = recursiveClassify(tree.children[i], rowToClassify, header);
 				}
 			}
+			System.out.println("");
 		}
 		if(!foundInDicisionTree){
-
+			result = -100;
 		}
 		return result;
 	}
@@ -162,6 +175,15 @@ class ID3 {
 			}
 		}
 		return results;
+	}
+
+	public int findString(String test, int column){
+		for(int i =  0; i < strings[column].length; i++){
+			if(test.equals(strings[column][i])){
+				return i;
+			}
+		}
+		return -1;
 	}
 
 	public TreeNode recursiveTrainingmethod(String[][] data, Integer[] columnsRemoved){
