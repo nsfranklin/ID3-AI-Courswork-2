@@ -96,11 +96,54 @@ class ID3 {
 	 **/
 
 	public void classify(String[][] testData) {
-		String[] TEST = {"No", "No", "Yes", "Yes", "Yes", "No", "Yes","No", "Yes", "Yes", "Yes", "Yes", "Yes","No"};
+		//String[] TEST = {"No", "No", "Yes", "Yes", "Yes", "No", "Yes","No", "Yes", "Yes", "Yes", "Yes", "Yes","No"};
+		ArrayList<Integer> results = new ArrayList<>();
 
 
-		
+		for(int k = 0 ; k < data.length ; k++){
+			for(int j = 0 ; j < data[k].length ; j++){
+				//System.out.print(data[k][j]);
+			}
+			//System.out.print("\n");
+		}
+		for(int i = 1 ; i < testData.length ; i++){
+			results.add(recursiveClassify(decisionTree, testData[i]));
+			//System.out.println(results.get(i));
+		}
+
+		for(int i = 0 ; i < testData.length-1 ; i++){
+			if(results.size() > i) {
+				System.out.println(classIntToString(results.get(i)));
+			}else{
+				System.out.println("");
+			}
+		}
 	} // classify()
+
+	public String classIntToString(int i){
+		return strings[attributes-1][i];
+	}
+
+	public Integer recursiveClassify(TreeNode tree, String[] rowToClassify){
+		String results = "";
+		int count = -1;
+		int i = 0;
+		for(i = 0 ; i < stringCount[tree.value]; i++){
+			//System.out.print(strings[tree.value][i] + " " + rowToClassify[tree.value] + " | ");
+			if(strings[tree.value][i].equals(rowToClassify[tree.value])){
+				count = i;
+				break;
+			}
+		}
+		//System.out.println(count);
+
+
+		if(tree.children == null || tree.children.length == 0){
+			//System.out.println("");
+			return (tree.value);
+		}
+		return recursiveClassify(tree.children[count], rowToClassify);
+	}
 
 	public void train(String[][] trainingData) {
 		indexStrings(trainingData);
@@ -111,10 +154,6 @@ class ID3 {
 			columnsRemoved[i] = -1;
 		}
 		decisionTree = recursiveTrainingmethod(alteredData, columnsRemoved);
-	}
-
-	public int recursiveClassify(TreeNode tree, String[] rowToClassify, String[] header){
-
 	}
 
 	public String[][] classNumberfier(String[][] data){
@@ -287,7 +326,7 @@ class ID3 {
 		return results;
 	}
 
-	public  ArrayList<String[][]> branchifyData(String[][] data, int column){
+	public ArrayList<String[][]> branchifyData(String[][] data, int column){
 		int count = 0;
 		ArrayList<String[][]> results = new ArrayList<>();
 		ArrayList<ArrayList<String[]>> splitData = splitifyData(data, column);
@@ -532,7 +571,13 @@ class ClassIncludingCountingListing<E> extends CountingList{
 		}
 	}
 }
+class StringTree {
 
+	StringTree[] children;
+	String Value;
+
+
+}
 
 
 
